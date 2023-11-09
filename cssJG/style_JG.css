@@ -1,0 +1,34 @@
+body{
+    text-align: center;
+    font-style: italic;
+    }
+    h1{
+        color: green;
+    }
+    h3{
+        color: brown;
+    }
+    h5{
+        color: blueviolet;
+    }
+    #page_footer{
+    font-style: italic;
+    font-size: small;
+    }
+    img {
+        display: block; /* Make sure images are block elements */
+        max-width: 100%; /* Make images responsive to their container */
+        height: auto; /* Automatically adjust the height to maintain aspect ratio */
+        margin: 0 auto; /* Center the image horizontally */
+    }
+    section {
+        text-align: center;
+    }
+    
+    #zwierze {
+        max-width: 100%;
+        height: 420px;
+        width: 500px; 
+        display: inline-block; 
+    }
+    

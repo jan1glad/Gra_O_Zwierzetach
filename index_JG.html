@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssJG/style_JG.css">
+    <script src="skryptyJG/skrypty_JG.js"></script>
+    <title>Gładykowski obraz i dźwięk</title>
+</head>
+<body onload="przedStart()">
+    <header id="page_headerJG">
+        <h1>Połącz dźwięki i obrazy</h1>
+        <h3>Gładykowski gra</h3>
+        <h5 id="chleb"></h5>
+    </header>
+    </body>
+    <section id="start">
+        <p>Wpisz i wybierz</p>
+        <br>
+        <label for="imie">Twoje imię: </label>
+        <input type="text" id="imie">
+        <br>
+        <select id="coLosuje">
+             <option value="img">obraz</option>
+             <option value="audio">dźwięk</option>
+         </select>
+         <label for="ilePytan">Ile pytań: </label>
+        <select id="ilePytan">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        </select>
+        <button onclick="start()">start</button>
+    </section>
+        <section id='img'>
+    <label hidden>Obrazy</label>
+    <img id="zwierze" src="">
+    <br><br>
+    <select id="wyborDzwieku" onchange="grajImgDzwiek()">
+        <option value="nic">cisza</option>
+        <option value="kot">dzwięk 1</option>
+        <option value="krowa">dzwięk 2</option>
+        <option value="pies">dzwięk 3</option>
+        <option value="koń">dzwięk 4</option>
+            </select>
+        <button onclick="checkImgAudio()">Zatwierdź wybór</button>
+        <audio controls id="imgDzwiek"  hidden >
+            <source type="audio/mpeg">
+        </audio>
+            </section>
+        <section id='audio'>
+    <label hidden>Dźwięki</label>
+    <select id="wyborZwierze">
+        <option value="kot">kot</option>
+        <option value="krowa">krowa</option>
+         <option value="pies">pies</option>
+         <option value="koń">koń</option>
+            </select>
+        <button onclick="checkAudioImg()">Zatwierdź wybór</button>
+    <audio title="" controls id="audioDzwiek" autoplay hidden>
+        <source id="myMusic2" src="" type="audio/mpeg">
+        </audio>
+        <img id="zwierzeAudio" src="Img_JG\question.jpg" title="question">
+    <br><br>
+        </section>
+        <section id='end'>
+    <br>
+    <label>Imię gracza: </label><label id='imieGracza'></label>
+    <br>
+    <label>Ile pytań jeszcze: </label><label id='ilePytanJeszcze'></label><br>
+    <label>Wynik gracza: </label><label id='jakiWynik'></label><br>
+    <button onclick='przedStart()'>Nowa Gra</button>
+        </section>
+    <footer id='page_footer'>
+    <br>2023&copy;Gładykowski
+    </footer>
+
+</section>
+</html>
